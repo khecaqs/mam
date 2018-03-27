@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './login/setting.dart';
 import './login/login.dart';
 import './pages/home_page.dart';
+import './login/auth.dart';
 
 void main() =>  runApp(new MyApp());
 
@@ -26,6 +27,8 @@ _MyAppState() {
 
 void onSubmit() {
   // sini nak kena masuk ke db untuk username ngan password
+var userId = _login.username;
+var pass = _login.password;
 
   print('Login With: ' +_login.username + ' ' + _login.password);
   if(_login.username =="a" && _login.password == '1') {
