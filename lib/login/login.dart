@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter/foundation.dart';
 
 class login extends StatelessWidget {
+  
   const login ({
    Key key,
    @required this.onSubmit,
@@ -17,11 +18,15 @@ class login extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+   // bool _isLoading = false;
+    //var logBtn;
     return new Column(
       children: <Widget>[
         new TextField( controller: _user, decoration: new InputDecoration(hintText: " Enter a username"),),
         new TextField( controller: _pass, decoration: new InputDecoration(hintText: " Enter a password"),obscureText: true,),
-        new RaisedButton(child: new Text('Submit'), onPressed: onSubmit),
+       //logBtn = new RaisedButton(child: new Text('Submit'), onPressed: onSubmit),
+      new RaisedButton(child: new Text('Submit'), onPressed: onSubmit),
+        //_isLoading ? new CircularProgressIndicator() : logBtn
       ],
     );
   }
