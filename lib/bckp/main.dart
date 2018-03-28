@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import './login/setting.dart';
-import './login/login.dart';
-import './pages/home_page.dart';
-import './login/LogAuth.dart';
+import '../login/setting.dart';
+import '../login/login.dart';
+import '../pages/home_page.dart';
+import '../login/auth.dart';
 
 void main() =>  runApp(new MyApp());
 
@@ -10,10 +10,7 @@ class MyApp extends StatefulWidget {
   _MyAppState createState() => new _MyAppState();
 }
 
-class _MyAppState extends State<MyApp> implements LogAuthContract {
-
-BuildContext _ctx;
-
+class _MyAppState extends State<MyApp> {
 
 String _title = "Please Login";
 Widget _screen;
@@ -21,36 +18,15 @@ login _login;
 HomePage _settings;
 bool _authenticated;
 
-LoginScreenPresenter _presenter;
-String username;
-String password;
-
 _MyAppState() {
   _login = new login(onSubmit: (){onSubmit();});
   _settings = new HomePage();
   _screen = _login;
   _authenticated = false;
-
-  //_presenter = new LoginScreenPresenter();
- // _doLogin 
 }
 
-
 void onSubmit() {
-
-// sini nak kena masuk ke db untuk username ngan password
-
-/*****************************
- * authenticate
- ************************/
-
-//_presenter.doLogin(username, password);
-
-username = _login.username;
-password = _login.password;
-
-print('username: '+ username);
-print('Password: '+ password);
+  // sini nak kena masuk ke db untuk username ngan password
 
 
   print('Login With: ' +_login.username + ' ' + _login.password);

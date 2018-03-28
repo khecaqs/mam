@@ -25,7 +25,7 @@ class login extends StatelessWidget {
         new TextField( controller: _user, decoration: new InputDecoration(hintText: " Enter a username"),),
         new TextField( controller: _pass, decoration: new InputDecoration(hintText: " Enter a password"),obscureText: true,),
        //logBtn = new RaisedButton(child: new Text('Submit'), onPressed: onSubmit),
-      new RaisedButton(child: new Text('Submit'), onPressed: onSubmit),
+      new RaisedButton(child: new Text('Masuk'), onPressed: onSubmit),
         //_isLoading ? new CircularProgressIndicator() : logBtn
       ],
     );
